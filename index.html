@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret 360 • İş Zekası ve Satış Dashboard'u</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 15% 15%, #0f1c3d 0%, #091226 50%, #050a17 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(22, 40, 82, 0.95) 0%, rgba(13, 24, 54, 0.98) 100%);
+            border: 1.5px solid rgba(56, 189, 248, 0.35);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(14px);
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.45);
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ffffff 0%, #38bdf8 65%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 14px;
+            letter-spacing: -0.8px;
+        }
+        p.subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 35px;
+            text-align: left;
+        }
+        .card {
+            background: rgba(16, 29, 60, 0.8);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .card-label {
+            font-size: 0.85rem;
+            color: #38bdf8;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .card-val {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .card-sub {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        .actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: #0284c7;
+            color: #ffffff;
+            box-shadow: 0 4px 18px rgba(2, 132, 199, 0.45);
+        }
+        .btn-primary:hover {
+            background: #0369a1;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f1f5f9;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">● SQLite Canlı Veri Seti & İş Zekası Paneli</span>
+        <h1>E-TİCARET 360 DASHBOARD</h1>
+        <p class="subtitle">
+            Gerçek veritabanı üzerinde finansal satış, ürün, kategori, müşteri RFM segmentasyonu, iade ve dönüşüm hunisi analizleri.
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-label">Net Ürün Satışı</div>
+                <div class="card-val">24.588.466,13 TL</div>
+                <div class="card-sub">Kupon & iadeler düşülmüş</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Teslim Sipariş</div>
+                <div class="card-val">7.644 Adet</div>
+                <div class="card-sub">8.044 toplam sipariş</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Kalem Hacmi</div>
+                <div class="card-val">13.858 Kalem</div>
+                <div class="card-sub">105.136 web olayı</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="https://github.com/alperenerepla/eticaret-dashboard" target="_blank" class="btn btn-secondary">
+                📂 GitHub Deposu
+            </a>
+            <a href="https://share.streamlit.io/" target="_blank" class="btn btn-primary">
+                🚀 Streamlit Cloud ile Başlat
+            </a>
+        </div>
+
+        <footer>
+            E-Ticaret 360 • BTO 303 Proje Uygulaması • SQLite & Streamlit
+        </footer>
+    </div>
+</body>
+</html>
